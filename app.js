@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 
 app.use(cookieParser());
-
+console.log('cookie parser test');
 app.set("view engine", "ejs");
 
 app.get("/", function(req, res){
@@ -85,7 +85,8 @@ app.post("/", function(req, res) {
    }
   
    formv3();
-    // or do something else here
+   console.log('formv3 test');
+   // or do something else here
     res.redirect('/') 
   })
 });
