@@ -20,11 +20,11 @@ app.get("/about", function(req, res){
 const MongoClient = require('mongodb').MongoClient;
 
 
-const CONNECTION_URL = "mongodb+srv://itsmejaong:Study1ng@portfolio-app.zba91ak.mongodb.net/test";
+const CONNECTION_URL = "mongodb+srv://itsmejaong:Study1ng@portfolio-app.zba91ak.mongodb.net/?retryWrites=true&w=majority";
 const DATABASE_NAME = "newdb"; // you can change the database name
 var database, collection;
 
-MongoClient.connect(CONNECTION_URL, { useNewUrlParser: true }, (error, client) => {
+MongoClient.connect(CONNECTION_URL, { useNewUrlParser: true }, (error, client)  => {
   if(error) throw error;
 
   database = client.db(DATABASE_NAME);
