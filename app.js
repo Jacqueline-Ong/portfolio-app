@@ -19,6 +19,7 @@ app.get("/about", function(req, res){
 
 const MongoClient = require('mongodb').MongoClient;
 
+
 const CONNECTION_URL = "mongodb+srv://itsmejaong:Study1ng@portfolio-app.zba91ak.mongodb.net/test";
 const DATABASE_NAME = "newdb"; // you can change the database name
 var database, collection;
