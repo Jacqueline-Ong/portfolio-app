@@ -27,9 +27,8 @@ var database, collection;
 const createConnection = () => {
   const client = new MongoClient("mongodb+srv://itsmejaong:Study1ng@portfolio-app.zba91ak.mongodb.net/?retryWrites=true&w=majority");
   return async function run() {
-    await client.connect() {
-      console.log(DB connected); 
-    };
+    await client.connect(); 
+    console.log(DB connected); 
   };
 };
 
