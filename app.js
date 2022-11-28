@@ -33,8 +33,8 @@ console.log('MongoDB connected')}); // you can change the collection name
 
   // Start the application after the database connection is ready
   
-app.post("/", function(req, res) { 
-  collection.insertOne(req.body, (err, result) => {  
+app.post("/", async function(req, res) { 
+  await collection.insertOne(req.body, (err, result) => {  
     if (err) return console.log(err)
 
     console.log('saved to database')
