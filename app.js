@@ -24,6 +24,17 @@ const CONNECTION_URL = "mongodb+srv://itsmejaong:Study1ng@portfolio-app.zba91ak.
 const DATABASE_NAME = "newdb"; // you can change the database name
 var database, collection;
 
+const createConnection = () => {
+  const client = new MongoClient("mongodb+srv://itsmejaong:Study1ng@portfolio-app.zba91ak.mongodb.net/?retryWrites=true&w=majority);
+  return async function run() {
+    await client.connect() {
+      console.log(DB connected);
+    };
+  };
+};
+
+createConnection();
+
 MongoClient.connect(CONNECTION_URL, { useNewUrlParser: true }, (error, client)  => {
   if(error) throw error;
 
