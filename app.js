@@ -25,10 +25,10 @@ const DATABASE_NAME = "newdb"; // you can change the database name
 var database, collection;
 
 const createConnection = () => {
-  const client = new MongoClient("mongodb+srv://itsmejaong:Study1ng@portfolio-app.zba91ak.mongodb.net/?retryWrites=true&w=majority);
+  const client = new MongoClient("mongodb+srv://itsmejaong:Study1ng@portfolio-app.zba91ak.mongodb.net/?retryWrites=true&w=majority");
   return async function run() {
     await client.connect() {
-      console.log(DB connected);
+      console.log(DB connected); 
     };
   };
 };
