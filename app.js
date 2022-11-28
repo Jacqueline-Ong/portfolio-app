@@ -63,7 +63,7 @@ app.post("/", function(req, res) {
       }
   
       var final_data = JSON.stringify(data)
-  
+      
       xhr.open('POST', url);
       // Sets the value of the 'Content-Type' HTTP request headers to 'application/json'
       xhr.setRequestHeader('Content-Type', 'application/json');
@@ -87,6 +87,7 @@ app.post("/", function(req, res) {
    }
   
    formv3();
+   console.log(final_data);
    console.log('formv3 test');
    // or do something else here
     res.redirect('/') 
